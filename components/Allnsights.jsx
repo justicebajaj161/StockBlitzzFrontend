@@ -86,14 +86,6 @@ export default function AIInsights({ aiAnalysis }) {
           AI-Powered Analysis
         </h2>
         
-        {/* Recommendation Badge */}
-        <div className="alert alert-info mb-6">
-          <TrendingUp className="w-6 h-6" />
-          <div>
-            <h3 className="font-bold">AI Recommendation</h3>
-            <p className="text-sm">{analysis.recommendation || aiAnalysis.analysis.slice(0, 200)}</p>
-          </div>
-        </div>
 
         {/* Strengths & Weaknesses */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
@@ -119,28 +111,6 @@ export default function AIInsights({ aiAnalysis }) {
             </div>
           )}
         </div>
-
-        {/* Risk Assessment */}
-        {analysis.risks && (
-          <div className="mb-6">
-            <div className="flex items-center gap-2 mb-2">
-              <Shield className="w-5 h-5" />
-              <h3 className="font-semibold">Risk Assessment</h3>
-            </div>
-            <p className="text-sm text-base-content/80">{analysis.risks}</p>
-          </div>
-        )}
-
-        {/* Strategy */}
-        {analysis.strategy && (
-          <div>
-            <div className="flex items-center gap-2 mb-2">
-              <Target className="w-5 h-5" />
-              <h3 className="font-semibold">Investment Strategy</h3>
-            </div>
-            <p className="text-sm text-base-content/80">{analysis.strategy}</p>
-          </div>
-        )}
 
         {/* Full Analysis Text */}
         <div className="collapse collapse-arrow bg-base-200 mt-6">
