@@ -25,7 +25,7 @@ export default function Home() {
 
   const createSession = async () => {
     try {
-      const response = await fetch('http://localhost:8000/api/session', {
+      const response = await fetch('https://stockblitzbackend.onrender.com/api/session', {
         method: 'POST'
       })
       const data = await response.json()
@@ -42,7 +42,7 @@ export default function Home() {
     try {
       const startTime = Date.now()
       
-      const response = await fetch('http://localhost:8000/api/analyze', {
+      const response = await fetch('https://stockblitzbackend.onrender.com/api/analyze', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
